@@ -1,6 +1,7 @@
 import paralleldots
+import os
 
 def getSentiment(input):
-    paralleldots.set_api_key("h8K0KZSPxILzM9tHTFrQ0LjhxdIHH8MH3MJL6uXbCWo")
+    paralleldots.set_api_key(os.environ.get("PARALLELDOTS_API_KEY"))
     
     return paralleldots.sentiment(input)
